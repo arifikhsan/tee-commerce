@@ -7,8 +7,7 @@
 4.	Mempunyai fitur pagination, dan
 5.	Mempunyai fitur filter berdasarkan kategori & warna.
 
-+++++
-Tambahan:
-6. Responsive mobile view
-7. State management menggunakan Zustand
-8. Custom UI TailwindCSS
+Tambahan:  
+1.  Responsive mobile view
+2.  State management menggunakan Zustand
+3.  Custom UI TailwindCSS
