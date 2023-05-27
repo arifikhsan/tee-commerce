@@ -6,10 +6,10 @@ export function Header() {
   return (
     <div className='relative font-work'>
       <div
-        className='p-4 md:py-5'
+        className='p-4 md:py-4'
         style={{ boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.08)' }}>
-        <div className='max-w-7xl mx-auto flex justify-between items-center'>
-          <a className='font-akira inline-block' href='/'>
+        <div className='flex items-center justify-between mx-auto max-w-7xl'>
+          <a className='inline-block font-akira' href='/'>
             Tee Commerce
           </a>
           <button className='md:hidden' onClick={() => setShowMenu(!showMenu)}>
@@ -28,7 +28,7 @@ export function Header() {
             </svg>
           </button>
           <div className='hidden md:block'>
-            <div className='bg-white flex flex-row space-x-8 uppercase font-work'>
+            <div className='flex flex-row space-x-8 uppercase bg-white font-work'>
               <a className='block p-4 font-bold underline' href='/'>
                 Pria
               </a>
@@ -88,8 +88,8 @@ export function Header() {
       </div>
 
       {showMenu && (
-        <div className='absolute top-0 mt-14 w-full uppercase font-work'>
-          <div className='bg-white flex flex-col'>
+        <div className='absolute top-0 w-full uppercase mt-14 font-work'>
+          <div className='flex flex-col bg-white'>
             <a className='block p-4 font-bold underline' href='/'>
               Pria
             </a>

@@ -6,8 +6,8 @@ export default function ProductItem({ item, index }) {
 
   return (
     <div className='font-work'>
-      <div className='cursor-pointer' onClick={() => setShowDetail(true)}>
-        <img src={`/images/${(index + 1) % 10}.png`} alt={item.name} />
+      <div className='flex flex-col cursor-pointer' onClick={() => setShowDetail(true)}>
+        <img className='' src={`/images/${(index + 1) % 10}.png`} alt={item.name} />
         <div className='flex justify-between mt-3'>
           <span className='font-bold text-primary'>{item.nama}</span>
           <span className='text-primary'>
@@ -28,16 +28,16 @@ export default function ProductItem({ item, index }) {
             onClick={() => setShowDetail(false)}
             className='fixed inset-0'
             style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}></div>
-          <div className='fixed inset-0 w-[972px] m-auto p-4 overflow-auto'>
+          <div className='fixed inset-0 max-w-[972px] md:mx-auto md:mt-12 m-4 overflow-auto'>
             <div className='p-4 bg-white '>
-              <div className='flex space-x-4'>
+              <div className='flex flex-col md:space-x-4 md:flex-row'>
                 <div className='grid grid-cols-2 gap-4 wrap'>
                   <img src='/images/detail/detail1.png' alt='' />
                   <img src='/images/detail/detail2.png' alt='' />
                   <img src='/images/detail/detail3.png' alt='' />
                   <img src='/images/detail/detail4.png' alt='' />
                 </div>
-                <div className='w-1/3 pt-4 md:pt-0'>
+                <div className='pt-4 md:w-1/3 md:pt-0'>
                   <p className='text-2xl font-work'>{item.nama}</p>
                   <p className='mt-5 text-2xl font-bold'>
                     <CurrencyFormat

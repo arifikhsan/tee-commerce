@@ -556,6 +556,82 @@ const items = [
     created_date: '2023-05-21',
     id: '20',
   },
+  {
+    nama: 'Celana Tiga',
+    harga: 210000,
+    kategori: [
+      {
+        name: 'lotto',
+      },
+      {
+        name: 'celana',
+      },
+      {
+        name: 'celana panjang',
+      },
+    ],
+    stok: 34,
+    warna: 'cream',
+    created_date: '2023-05-21',
+    id: '21',
+  },
+  {
+    nama: 'Celana Tiga',
+    harga: 210000,
+    kategori: [
+      {
+        name: 'lotto',
+      },
+      {
+        name: 'celana',
+      },
+      {
+        name: 'celana panjang',
+      },
+    ],
+    stok: 34,
+    warna: 'cream',
+    created_date: '2023-05-21',
+    id: '22',
+  },
+  {
+    nama: 'Celana Tiga',
+    harga: 210000,
+    kategori: [
+      {
+        name: 'lotto',
+      },
+      {
+        name: 'celana',
+      },
+      {
+        name: 'celana panjang',
+      },
+    ],
+    stok: 34,
+    warna: 'cream',
+    created_date: '2023-05-21',
+    id: '23',
+  },
+  {
+    nama: 'Celana Tiga',
+    harga: 210000,
+    kategori: [
+      {
+        name: 'lotto',
+      },
+      {
+        name: 'celana',
+      },
+      {
+        name: 'celana panjang',
+      },
+    ],
+    stok: 34,
+    warna: 'cream',
+    created_date: '2023-05-21',
+    id: '24',
+  },
 ];
 
 
@@ -592,6 +668,12 @@ const usePaginationStore = create((set) => ({
   setPage: (newPage) => {
     return set((state) => ({ page: newPage }));
   },
+  resetPagination: () => {
+    return set((state) => ({
+      page: 1,
+      item: 9,
+    }))
+  }
 }));
 
 export { useItemStore, usePaginationStore };

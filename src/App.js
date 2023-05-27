@@ -36,13 +36,13 @@ function App() {
   return (
     <div className='font-work'>
       <Header />
-      <div className='mt-[60px] pb-16 flex items-start max-w-6xl mx-auto'>
-        <div className='w-[280px]'>
+      <div className='flex-col mt-[60px] pb-16 flex md:flex-row items-start max-w-6xl mx-auto'>
+        <div className='w-full md:w-[280px]'>
           <Filter />
         </div>
 
-        <div className='ml-[40px]'>
-          <div className='p-4 pt-0 md:p-0'>
+        <div className='w-full md:ml-[40px]'>
+          <div className='p-4 md:p-0'>
             <img src='/images/banner.png' alt='' />
           </div>
           <div className='flex justify-between p-4 md:px-0 font-work'>

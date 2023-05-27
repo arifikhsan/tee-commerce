@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {useItemStore} from '../store';
+import { useItemStore, usePaginationStore } from '../store';
 
 export default function Filter() {
   const [showFilter, setShowFilter] = useState(true);
@@ -21,14 +21,22 @@ export default function Filter() {
 
   const filterBy = useItemStore((state) => state.filterBy);
   const resetItems = useItemStore((state) => state.resetItems);
+  const resetPagination = usePaginationStore((state) => state.resetPagination);
 
   useEffect(() => {
     if (filteredCategories.length > 0 || filteredColors.length > 0) {
       filterBy({ categories: filteredCategories, colors: filteredColors });
+      resetPagination();
     } else {
       resetItems();
     }
-  }, [filterBy, filteredCategories, filteredColors, resetItems]);
+  }, [
+    filterBy,
+    filteredCategories,
+    filteredColors,
+    resetItems,
+    resetPagination,
+  ]);
 
   const categories = [
     {
@@ -80,15 +88,8 @@ export default function Filter() {
 
   return (
     <div
-      className='rounded-lg'
+      className='rounded-lg md:max-w-[280px]'
       style={{ boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.08)' }}>
-      <div className='flex justify-end p-4 md:hidden'>
-        <button
-          onClick={() => setShowFilter(!showFilter)}
-          className='px-4 py-2 outline'>
-          Filter
-        </button>
-      </div>
       <div className='p-4 pb-0'>
         <p className='font-bold'>
           Filter ({filteredCategories.length + filteredColors.length})
