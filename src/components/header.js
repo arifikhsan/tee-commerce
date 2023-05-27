@@ -88,15 +88,15 @@ export function Header() {
       </div>
 
       {showMenu && (
-        <div className='absolute top-0 w-full uppercase mt-14 font-work'>
+        <div className='absolute top-0 z-10 w-full uppercase mt-14 font-work'>
           <div className='flex flex-col bg-white'>
-            <a className='block p-4 font-bold underline' href='/'>
+            <a className='block p-4 font-bold underline border-b' href='/'>
               Pria
             </a>
-            <a className='block p-4' href='/'>
+            <a className='block p-4 border-b' href='/'>
               Wanita
             </a>
-            <a className='block p-4' href='/'>
+            <a className='block p-4 border-b' href='/'>
               Anak-Anak
             </a>
           </div>

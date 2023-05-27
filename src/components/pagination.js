@@ -34,20 +34,20 @@ export default function Pagination() {
   };
 
   return (
-    <div className='flex items-start justify-between p-4 mt-6 text-center font-work'>
-      <p className='text-primary'>
+    <div className='flex flex-col items-start justify-between p-4 mt-6 md:flex-row md:p-0 md:pt-4 font-work'>
+      <p className='w-full text-center md:text-left text-primary'>
         {countFirstItemSeen()} - {constLastItemSeen()} dari {items.length}{' '}
         produk
       </p>
 
-      <div className='flex mt-4 space-x-4 md:mt-0'>
+      <div className='flex justify-center w-full mt-4 space-x-4 md:mt-0 md:w-auto md:justify-start'>
         <button
           disabled={!hasPreviousPage}
           onClick={() => {
             setPage(currentPage - 1);
           }}
           className={classNames(
-            'bg-primary flex items-center space-x-1 px-4 py-2 text-white rounded',
+            'bg-primary md:flex items-center space-x-1 px-4 md:px-6 py-2 text-white rounded',
             { 'bg-opacity-20': !hasPreviousPage }
           )}>
           <svg
@@ -62,7 +62,7 @@ export default function Pagination() {
               strokeWidth='2'
             />
           </svg>
-          <span> Kembali</span>
+          <span className='hidden md:inline'> Kembali</span>
         </button>
         {hasPrevPageFor(currentPage - 2) && (
           <button
@@ -110,10 +110,10 @@ export default function Pagination() {
             setPage(currentPage + 1);
           }}
           className={classNames(
-            'bg-primary flex items-center space-x-1 px-4 py-2 text-white rounded',
+            'bg-primary md:flex items-center space-x-1 px-4 md:px-6 py-2 text-white rounded',
             { 'bg-opacity-20': !hasNextPageFor(currentPage + 1) }
           )}>
-          <span>Lanjut </span>
+          <span className='hidden md:inline'>Lanjut </span>
           <svg
             width='18'
             height='18'

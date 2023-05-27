@@ -28,7 +28,7 @@ export default function ProductItem({ item, index }) {
             onClick={() => setShowDetail(false)}
             className='fixed inset-0'
             style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}></div>
-          <div className='fixed inset-0 max-w-[972px] md:mx-auto md:mt-12 m-4 overflow-auto'>
+          <div className='fixed inset-0 max-w-[972px] md:mx-auto m-4 overflow-auto'>
             <div className='p-4 bg-white '>
               <div className='flex flex-col md:space-x-4 md:flex-row'>
                 <div className='grid grid-cols-2 gap-4 wrap'>
