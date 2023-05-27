@@ -100,7 +100,7 @@ export default function Filter() {
           <button
             onClick={() => setShowCategory(!showCategory)}
             className='inline-flex items-center justify-between w-full'>
-            <span className='font-bold'>Kategori</span>
+            <span className='mt-2 font-bold'>Kategori</span>
             <svg
               className={showCategory ? 'rotate-0' : 'rotate-180'}
               width='12'
@@ -116,7 +116,7 @@ export default function Filter() {
             </svg>
           </button>
           {showCategory && (
-            <div>
+            <div className='mt-4'>
               {categories.map((category) => {
                 return (
                   <div

@@ -7,8 +7,8 @@ export default function ProductItem({ item, index }) {
   return (
     <div className='font-work'>
       <div className='cursor-pointer' onClick={() => setShowDetail(true)}>
-        <img src={`/images/${index + 1}.png`} alt={item.name} />
-        <div className='mt-3 flex justify-between'>
+        <img src={`/images/${(index + 1) % 10}.png`} alt={item.name} />
+        <div className='flex justify-between mt-3'>
           <span className='font-bold text-primary'>{item.nama}</span>
           <span className='text-primary'>
             <CurrencyFormat
@@ -29,17 +29,17 @@ export default function ProductItem({ item, index }) {
             className='fixed inset-0'
             style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}></div>
           <div className='fixed inset-0 w-[972px] m-auto p-4 overflow-auto'>
-            <div className='bg-white p-4 '>
+            <div className='p-4 bg-white '>
               <div className='flex space-x-4'>
-                <div className='grid gap-4 grid-cols-2 wrap'>
+                <div className='grid grid-cols-2 gap-4 wrap'>
                   <img src='/images/detail/detail1.png' alt='' />
                   <img src='/images/detail/detail2.png' alt='' />
                   <img src='/images/detail/detail3.png' alt='' />
                   <img src='/images/detail/detail4.png' alt='' />
                 </div>
-                <div className='pt-4 md:pt-0 w-1/3'>
-                  <p className='font-work text-2xl'>{item.nama}</p>
-                  <p className='font-bold mt-5 text-2xl'>
+                <div className='w-1/3 pt-4 md:pt-0'>
+                  <p className='text-2xl font-work'>{item.nama}</p>
+                  <p className='mt-5 text-2xl font-bold'>
                     <CurrencyFormat
                       value={item.harga}
                       displayType='text'
@@ -49,15 +49,15 @@ export default function ProductItem({ item, index }) {
                     />
                   </p>
                   <p className='mt-4'>Ukuran</p>
-                  <div className='mt-5 font-work flex space-x-3'>
+                  <div className='flex mt-5 space-x-3 font-work'>
                     <button className='p-2 font-bold'>XS</button>
                     <button className='p-2 font-bold'>S</button>
                     <button className='p-2 font-bold'>M</button>
                     <button className='p-2 font-bold'>L</button>
                     <button className='p-2 font-bold'>XL</button>
                   </div>
-                  <div className='mt-10 flex justify-between space-x-4'>
-                    <button className='grow bg-black text-white rounded px-4 py-2 font-work'>
+                  <div className='flex justify-between mt-10 space-x-4'>
+                    <button className='px-4 py-2 text-white bg-black rounded grow font-work'>
                       Beli
                     </button>
                     <button>
