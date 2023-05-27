@@ -25,7 +25,7 @@ export default function SortingButton() {
     <div>
       <button
         onClick={() => setShowSort(true)}
-        className='inline-flex items-center space-x-1 bg-primary text-white px-4 py-2 rounded'>
+        className='inline-flex items-center px-4 py-2 space-x-1 text-white rounded bg-primary'>
         <span>Urutkan </span>
         <svg
           width='18'
@@ -56,10 +56,10 @@ export default function SortingButton() {
             onClick={() => setShowSort(false)}
             className='fixed inset-0'
             style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}></div>
-          <div className='fixed bg-white w-64 h-32 m-auto inset-0 overflow-auto'>
-            <div className=' p-4'>
-              <p className='font-work font-bold text-primary'>Urut berdasar</p>
-              <div className='mt-4'>
+          <div className='fixed inset-0 w-64 m-auto overflow-auto bg-white rounded-md h-36'>
+            <div className='p-4'>
+              <p className='font-bold font-work text-primary'>Urutkan berdasar</p>
+              <div className='m-4'>
                 <div className='flex items-center mb-4'>
                   <input
                     checked={value === 'asc'}
@@ -72,7 +72,7 @@ export default function SortingButton() {
                   />
                   <label
                     htmlFor='sort-asc'
-                    className='ml-4 text-sm font-medium text-gray-900'>
+                    className='ml-4 text-sm font-medium text-primary'>
                     Tanggal Terbaru
                   </label>
                 </div>
@@ -88,7 +88,7 @@ export default function SortingButton() {
                   />
                   <label
                     htmlFor='sort-desc'
-                    className='ml-4 text-sm font-medium text-gray-900'>
+                    className='ml-4 text-sm font-medium text-primary'>
                     Tanggal Terlama
                   </label>
                 </div>
