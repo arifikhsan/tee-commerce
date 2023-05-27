@@ -7,7 +7,6 @@ export default function Filter() {
   const [showCategory, setShowCategory] = useState(true);
   const [showColor, setShowColor] = useState(true);
 
-
   const [filteredColors, setFilteredColors] = useState([]);
   const [filteredCategories, setFilteredCategories] = useState([]);
 
@@ -83,7 +82,7 @@ export default function Filter() {
     <div
       className='rounded-lg'
       style={{ boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.08)' }}>
-      <div className='md:hidden p-4 flex justify-end'>
+      <div className='flex justify-end p-4 md:hidden'>
         <button
           onClick={() => setShowFilter(!showFilter)}
           className='px-4 py-2 outline'>
@@ -100,7 +99,7 @@ export default function Filter() {
         <div className='p-4'>
           <button
             onClick={() => setShowCategory(!showCategory)}
-            className='inline-flex w-full justify-between items-center'>
+            className='inline-flex items-center justify-between w-full'>
             <span className='font-bold'>Kategori</span>
             <svg
               className={showCategory ? 'rotate-0' : 'rotate-180'}
@@ -128,7 +127,7 @@ export default function Filter() {
                       type='checkbox'
                       id={category.name}
                       value=''
-                      className='w-5 h-5 accent-primary rounded-md'
+                      className='w-5 h-5 rounded-md accent-primary'
                       onChange={() => {
                         if (filteredCategories.includes(category.name)) {
                           const newArr = filteredCategories.filter(
@@ -145,7 +144,7 @@ export default function Filter() {
                     />
                     <label
                       htmlFor={category.name}
-                      className='capitalize peer-checked:border-primary text-sm items-center p-2 space-x-2'>
+                      className='items-center p-2 space-x-2 text-sm capitalize peer-checked:border-primary'>
                       <span>{category.name}</span>
                     </label>
                   </div>
@@ -155,7 +154,7 @@ export default function Filter() {
           )}
           <button
             onClick={() => setShowColor(!showColor)}
-            className='inline-flex mt-2 w-full justify-between items-center'>
+            className='inline-flex items-center justify-between w-full mt-2'>
             <span className='font-bold'>Warna</span>
             <svg
               className={showColor ? 'rotate-0' : 'rotate-180'}
@@ -172,7 +171,7 @@ export default function Filter() {
             </svg>
           </button>
           {showColor && (
-            <div className='mt-4 flex flex-wrap gap-3'>
+            <div className='flex flex-wrap gap-3 mt-4'>
               <div className='inline'>
                 <input
                   checked={filteredColors.includes('merah')}
@@ -201,7 +200,7 @@ export default function Filter() {
                 <label
                   htmlFor='hitam'
                   className='inline-flex border-[#BCBCBC] peer-checked:border-primary items-center border p-2 space-x-2'>
-                  <span className='h-4 w-4 bg-black rounded-sm'></span>
+                  <span className='w-4 h-4 bg-black rounded-sm'></span>
                   <span>Hitam</span>
                 </label>
               </div>
@@ -217,7 +216,7 @@ export default function Filter() {
                 <label
                   htmlFor='putih'
                   className='inline-flex border-[#BCBCBC] peer-checked:border-primary items-center border p-2 space-x-2'>
-                  <span className='h-4 w-4 border border-primary rounded-sm bg-white'></span>
+                  <span className='w-4 h-4 bg-white border rounded-sm border-primary'></span>
                   <span>Putih</span>
                 </label>
               </div>
