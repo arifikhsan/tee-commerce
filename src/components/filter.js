@@ -24,6 +24,7 @@ export default function Filter() {
 
   useEffect(() => {
     if (filteredCategories.length > 0 || filteredColors.length > 0) {
+      resetItems();
       filterBy({ categories: filteredCategories, colors: filteredColors });
       resetPagination();
     } else {
@@ -185,7 +186,7 @@ export default function Filter() {
               />
               <label
                 htmlFor='merah'
-                className='inline-flex border-[#BCBCBC] peer-checked:border-primary items-center border p-2 space-x-2'>
+                className='inline-flex border-[#BCBCBC] rounded-sm peer-checked:border-primary peer-checked:bg-gray-200 items-center border p-2 space-x-2'>
                 <span className='h-4 w-4 bg-[#FF2536] rounded-sm'></span>
                 <span>Merah</span>
               </label>
@@ -201,7 +202,7 @@ export default function Filter() {
               />
               <label
                 htmlFor='hitam'
-                className='inline-flex border-[#BCBCBC] peer-checked:border-primary items-center border p-2 space-x-2'>
+                className='inline-flex border-[#BCBCBC] rounded-sm peer-checked:border-primary peer-checked:bg-gray-200 items-center border p-2 space-x-2'>
                 <span className='w-4 h-4 bg-black rounded-sm'></span>
                 <span>Hitam</span>
               </label>
@@ -217,7 +218,7 @@ export default function Filter() {
               />
               <label
                 htmlFor='putih'
-                className='inline-flex border-[#BCBCBC] peer-checked:border-primary items-center border p-2 space-x-2'>
+                className='inline-flex border-[#BCBCBC] rounded-sm peer-checked:border-primary peer-checked:bg-gray-200 items-center border p-2 space-x-2'>
                 <span className='w-4 h-4 bg-white border rounded-sm border-primary'></span>
                 <span>Putih</span>
               </label>
@@ -233,7 +234,7 @@ export default function Filter() {
               />
               <label
                 htmlFor='biru'
-                className='inline-flex border-[#BCBCBC] peer-checked:border-primary items-center border p-2 space-x-2'>
+                className='inline-flex border-[#BCBCBC] rounded-sm peer-checked:border-primary peer-checked:bg-gray-200 items-center border p-2 space-x-2'>
                 <span className='h-4 w-4 border border-primary rounded-sm bg-[#1C5CD8]'></span>
                 <span>Biru</span>
               </label>
@@ -249,7 +250,7 @@ export default function Filter() {
               />
               <label
                 htmlFor='kuning'
-                className='inline-flex border-[#BCBCBC] peer-checked:border-primary items-center border p-2 space-x-2'>
+                className='inline-flex border-[#BCBCBC] rounded-sm peer-checked:border-primary peer-checked:bg-gray-200 items-center border p-2 space-x-2'>
                 <span className='h-4 w-4 border border-primary rounded-sm bg-[#FFE86F]'></span>
                 <span>Kuning</span>
               </label>
@@ -265,7 +266,7 @@ export default function Filter() {
               />
               <label
                 htmlFor='cream'
-                className='inline-flex border-[#BCBCBC] peer-checked:border-primary items-center border p-2 space-x-2'>
+                className='inline-flex border-[#BCBCBC] rounded-sm peer-checked:border-primary peer-checked:bg-gray-200 items-center border p-2 space-x-2'>
                 <span className='h-4 w-4 border border-primary rounded-sm bg-[#FBE2C5]'></span>
                 <span>Krem</span>
               </label>

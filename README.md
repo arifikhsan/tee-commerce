@@ -10,5 +10,5 @@
 +++++
 Tambahan:
 6. Responsive mobile view
-7. State management menggunakan zustand
-8. TailwindCSS
+7. State management menggunakan Zustand
+8. Custom UI TailwindCSS

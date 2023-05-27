@@ -14,15 +14,23 @@ export default function Pagination() {
       return 1;
     }
 
-    return currentPage * currentItem - 2;
+    return currentPage * currentItem - 8;
   };
 
   const constLastItemSeen = () => {
-    return countFirstItemSeen() + 2;
+    if (items.length <= 9) {
+      return items.length;
+    }
+
+    if (countFirstItemSeen() + 8 >= items.length) {
+      return items.length;
+    }
+
+    return countFirstItemSeen() + 8;
   };
 
   const hasNextPageFor = (pageNumber) => {
-    return items.length - ((pageNumber - 1) * currentItem) > 0;
+    return items.length - (pageNumber - 1) * currentItem > 0;
   };
 
   const hasPrevPageFor = (pageNumber) => {

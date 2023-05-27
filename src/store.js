@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { sortBy, intersection } from 'lodash';
 
+// dari api
 // const items = [
 //   {
 //     nama: 'Kaus Satu',
