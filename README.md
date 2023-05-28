@@ -11,3 +11,10 @@ Tambahan:
 1.  Responsive mobile view
 2.  State management menggunakan Zustand
 3.  Custom UI TailwindCSS
+
+## Cara menjalankan
+
+```
+npm i -g yarn
+yarn dev
+```
